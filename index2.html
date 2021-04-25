@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test...ing 123 </title>
+    <!--BOOTSRAP LINKS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--Awesome Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+    <!--Our javascript-->
+    <script src="js/john-toggler.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>TOOGLER</title>
 </head>
+
 <body>
-    <p>rebase test 2</p>
+    <div class="container">
+        <!--THIS IS JUST A TIITLE WITH A TOOGLE BUTTON TO TURN ON/OFF THE LIGHTS-->
+        <h3 class="text-success" style="position:relative;padding:1em">
+            Toggle to show/hide elements
+            <span style="position:absolute;right:0;font-size:1em">
+                <i id="lights-mode" onclick="toggleLights()" class="fas fa-toggle-off"></i>
+            </span>
+        </h3>
+
+        <!--THIS IS THE CARD WITH THE CONTENT-->
+        <div class="card border-success" id="john-card">
+            <div class="card-header" id="john-tab-buttons">
+                <!--We let this div empty cuz will be filled by Javascript after load the document-->
+                <!--JS will read the file, search how many items are inside, and:
+                    For every item with paint a button with the title (h5)
+                    The first item will set display="block" to show it
+                -->
+            </div>
+
+            <!--We will create some content with same tag ALL HIDDEN (display:none)-->
+            <!--In this example, we put inside a div to catch the TWO elements
+                    First element, the title of the paragraph (h5)
+                    Second element, the content (p)
+                    -->
+            <div class="john-item card-body" style="display:none">
+                <!--FIRST ITEM (TAB)-->
+                <h5>Hi I'm John</h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia dolore aliquam eius vero, tempora voluptatum iure adipisci pariatur nulla, alias laudantium doloremque, placeat repudiandae eligendi. Odio animi dolorem esse?
+                </p>
+            </div>
+
+            <!--SECOND ITEM (TAB)-->
+            <div class="john-item card-body" style="display:none">
+                <h5>This is an example</h5>
+                <p>
+                    Arcu vitae elementum curabitur vitae nunc sed. Et tortor at risus viverra adipiscing at in tellus. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Enim blandit volutpat maecenas volutpat blandit.
+                </p>
+            </div>
+
+            <!--THIRD ITEM (TAB)-->
+            <div class="john-item card-body" style="display:none">
+                <h5>Do you see?</h5>
+                <p>
+                    Egestas maecenas pharetra convallis posuere morbi. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Feugiat in fermentum posuere urna nec tincidunt. Massa ultricies mi quis hendrerit dolor. Tempus imperdiet nulla malesuada pellentesque
+                    elit eget.
+                </p>
+            </div>
+        </div>
+        <p>rebase test 2</p>
+    </div>
+
+
 </body>
+
 </html>
